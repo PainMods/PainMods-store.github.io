@@ -5,58 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <style>
-        body, html {
+          body {
+
+            font-family: Arial, sans-serif;
+            text-color: white;
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: url('https://pomf2.lain.la/f/ywwu64s.jpg') no-repeat center center fixed; /* Wallpaper penuh */
-            background-size: cover; /* Membuat gambar latar belakang menutupi seluruh area */
-        }
+            background-color: none;
+            height: 100vh;
+            background-image: url('https://pomf2.lain.la/f/ywwu64s.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
 
         .content {
-            text-align: center;
-            margin-bottom: 20px;
-            z-index: 1;
             position: relative;
+            z-index: 1;
+            text-align: center;
+            margin-bottom: 20px; /*MAGRIN*/
         }
 
         .content h1 {
             font-size: 48px;
             margin: 0;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Background semi-transparan untuk teks */
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
         }
 
         /* Navigasi Button */
         .nav-buttons {
             display: flex;
-            flex-direction: column; /* Mengatur tombol agar berjejer ke bawah */
+            flex-direction: column;
             align-items: center;
             z-index: 1;
         }
 
         .nav-buttons a {
             color: white;
-            background-color: #4CAF50; /* Warna hijau untuk tombol */
-            font-size: 18px;
+            font-size: 24px;
+            margin: 10px 0;
             text-decoration: none;
             padding: 15px 30px;
             border-radius: 5px;
-            margin: 10px 0; /* Jarak antar tombol */
-            transition: background-color 0.3s;
-            width: 200px; /* Lebar tombol */
-            text-align: center; /* Teks di tengah */
+            transition: background-color 0.3s, transform 0.2s;
+            border: none; /*BORDER*/
+            cursor: pointer; /*KURSOR POINTER*/
+        }
+
+        .nav-buttons a.home {
+            background-color: #4CAF50; /*home*/
+        }
+
+        .nav-buttons a.about {
+            background-color: #2196F3; /*About*/
+        }
+
+        .nav-buttons a.services {
+            background-color: #FF9800; /*Services*/
+        }
+
+        .nav-buttons a.contact {
+            background-color: #F44336; /*Contact*/
         }
 
         .nav-buttons a:hover {
-            background-color: #45a049; /* Efek hover */
+            opacity: 0.8; /* Efek opacity saat hover */
+            transform: scale(1.05); /*hover*/
         }
     </style>
 </head>
@@ -70,13 +85,11 @@
 
     <!-- Navigation Buttons -->
     <div class="nav-buttons">
-        <a href="home.html">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="home.html" class="home">Home</a>
+        <a href="#about" class="about">About</a>
+        <a href="#services" class="services">Services</a>
+        <a href="#contact" class="contact">Contact</a>
     </div>
-
-    <div class="https://pomf2.lain.la/f/ywwu64s.jpg" id="background"></div>
 
 </body>
 </html>
