@@ -3,35 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage with Hamburger Menu</title>
+    <title>Homepage with Full-Screen Wallpaper</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
         }
 
-        /* Styling for the navigation bar */
+        /* Full-Screen Background */
+        body {
+            background-image: url('https://telegra.ph/file/42c647df30fa35fe23acf.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+        }
+
+        /* Navigation Bar Styling */
         nav {
-            background-color: #333;
-            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
             position: relative;
+            z-index: 1000;
         }
 
-        /* Hide the menu items initially */
         .menu {
             display: none;
             flex-direction: column;
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.8);
             position: absolute;
             top: 60px;
             right: 0;
             width: 200px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 100vh;
         }
 
-        /* Menu items */
         .menu a {
             color: white;
             padding: 10px;
@@ -46,7 +55,6 @@
             background-color: #575757;
         }
 
-        /* Styling for the hamburger icon */
         .hamburger {
             display: block;
             cursor: pointer;
@@ -67,19 +75,23 @@
         .container {
             text-align: center;
             padding: 50px;
+            z-index: 10;
+            position: relative;
         }
 
-        /* Style for image */
-        img {
-            width: 100%;
-            max-width: 1200px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
+        .container h1 {
+            margin-top: 20vh;
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
 
-        /* Responsive for larger screens */
+        .container p {
+            font-size: 18px;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Media Query for Larger Screens */
         @media(min-width: 768px) {
             .menu {
                 display: flex;
@@ -89,6 +101,7 @@
                 right: 0;
                 box-shadow: none;
                 width: auto;
+                height: auto;
             }
 
             .hamburger {
@@ -119,13 +132,11 @@
 
     <!-- Main Content -->
     <div class="container">
-        <img src="https://telegra.ph/file/d3a0cd50dfbfd20770d14.jpg" alt="Banner Image" />
-        <h1>Welcome to My Enhanced Homepage</h1>
-        <p>This is a basic HTML homepage with a responsive hamburger menu. Click on the hamburger icon to view the menu options.</p>
+        <h1>Welcome to My Website</h1>
+        <p>Enjoy the beautiful background with a responsive menu.</p>
     </div>
 
     <script>
-        // JavaScript to toggle the visibility of the menu
         function toggleMenu() {
             var menu = document.getElementById("menu");
             if (menu.style.display === "block") {
