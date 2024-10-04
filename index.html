@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <style>
-          body {
-
-            font-family: Arial, sans-serif;
-            text-color: white;
+        body, html {
             margin: 0;
             padding: 0;
-            background-color: none;
-            height: 100vh;
-            background-image: url('https://pomf2.lain.la/f/ywwu64s.jpg');
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: url('https://pomf2.lain.la/f/ywwu64s.jpg') no-repeat center center fixed; /*WALLPAPER*/
             background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        }
 
         .content {
             position: relative;
@@ -83,6 +85,8 @@
         <p>Enjoy shopping with us!</p>
     </div>
 
+<div class="background" id="background"></div>
+    
     <!-- Navigation Buttons -->
     <div class="nav-buttons">
         <a href="home.html" class="home">Home</a>
