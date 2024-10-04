@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Homepage</title>
+    <title>Enhanced Simple Homepage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            transition: background-color 0.5s ease;
         }
         nav {
             background-color: #333;
-            color: white;
             padding: 15px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         nav a {
             color: white;
@@ -24,20 +25,44 @@
             text-transform: uppercase;
             font-weight: bold;
             margin: 0 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         nav a:hover {
             background-color: #575757;
+            transform: scale(1.1);
         }
         .container {
             text-align: center;
             padding: 50px;
+            transition: transform 0.5s ease;
         }
         h1 {
             color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        h1:hover {
+            color: #4CAF50;
+            transform: scale(1.1);
         }
         p {
             font-size: 18px;
             color: #666;
+            line-height: 1.6;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        p:hover {
+            color: #333;
+            transform: scale(1.05);
+        }
+        img {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -51,10 +76,11 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- Main Content -->
+    <!-- Gambar di Bagian Atas -->
     <div class="container">
-        <h1>Welcome to My Simple Homepage</h1>
-        <p>This is a basic HTML homepage with a navigation menu. You can click on the links above to navigate to different pages.</p>
+        <img src="https://telegra.ph/file/d3a0cd50dfbfd20770d14.jpg" alt="Banner Gambar" />
+        <h1>Welcome to My Enhanced Homepage</h1>
+        <p>This is a basic HTML homepage with a navigation menu, an image, and some interactive effects. Hover over the elements to see the transitions.</p>
     </div>
 
 </body>
