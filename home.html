@@ -66,6 +66,34 @@
         .product-card button:hover {
             background-color: #45a049;
         }
+
+        /* Pop-up Styles */
+        .popup {
+            display: none; /* Hide the popup by default */
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            z-index: 1000; /* Ensure it is above other content */
+        }
+
+        .popup h2 {
+            margin-top: 0;
+        }
+
+        .popup button {
+            background-color: #f44336;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right; /* Align the close button to the right */
+        }
     </style>
 </head>
 <body>
@@ -84,7 +112,7 @@
             <h2>Produk 1</h2>
             <p>Deskripsi singkat produk 1. Produk ini adalah salah satu yang terbaik di pasaran.</p>
             <button>Beli Sekarang</button>
-            <button>Detail Produk</button>
+            <button onclick="showPopup('Produk 1: Detail tentang produk 1 di sini.')">Detail Produk</button>
         </div>
 
         <!-- Product Card 2 -->
@@ -93,7 +121,7 @@
             <h2>Produk 2</h2>
             <p>Deskripsi singkat produk 2. Produk ini cocok untuk berbagai kebutuhan.</p>
             <button>Beli Sekarang</button>
-            <button>Detail Produk</button>
+            <button onclick="showPopup('Produk 2: Detail tentang produk 2 di sini.')">Detail Produk</button>
         </div>
 
         <!-- Product Card 3 -->
@@ -102,9 +130,27 @@
             <h2>Produk 3</h2>
             <p>Deskripsi singkat produk 3. Produk unggulan dengan kualitas terbaik.</p>
             <button>Beli Sekarang</button>
-            <button>Detail Produk</button>
+            <button onclick="showPopup('Produk 3: Detail tentang produk 3 di sini.')">Detail Produk</button>
         </div>
     </div>
+
+    <!-- Pop-up Element -->
+    <div id="popup" class="popup">
+        <h2>Detail Produk</h2>
+        <p id="popup-content"></p>
+        <button onclick="closePopup()">Tutup</button>
+    </div>
+
+    <script>
+        function showPopup(detail) {
+            document.getElementById('popup-content').innerText = detail; // Set the popup content
+            document.getElementById('popup').style.display = 'block'; // Show the popup
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none'; // Hide the popup
+        }
+    </script>
 
 </body>
 </html>
