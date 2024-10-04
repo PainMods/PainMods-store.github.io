@@ -48,14 +48,32 @@
             font-size: 24px;
             margin: 10px 0;
             text-decoration: none;
-            padding: 10px 20px;
-            background-color: rgba(255, 255, 255, 0.2);
+            padding: 15px 30px;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none; /* Menghilangkan border */
+            cursor: pointer; /* Menambahkan cursor pointer */
+        }
+
+        .nav-buttons a.home {
+            background-color: #4CAF50; /* Warna hijau untuk Home */
+        }
+
+        .nav-buttons a.about {
+            background-color: #2196F3; /* Warna biru untuk About */
+        }
+
+        .nav-buttons a.services {
+            background-color: #FF9800; /* Warna oranye untuk Services */
+        }
+
+        .nav-buttons a.contact {
+            background-color: #F44336; /* Warna merah untuk Contact */
         }
 
         .nav-buttons a:hover {
-            background-color: rgba(255, 255, 255, 0.5);
+            opacity: 0.8; /* Efek opacity saat hover */
+            transform: scale(1.05); /* Efek sedikit membesar saat hover */
         }
     </style>
 </head>
@@ -69,10 +87,10 @@
 
     <!-- Navigation Buttons -->
     <div class="nav-buttons">
-        <a href="home.html">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="home.html" class="home">Home</a>
+        <a href="#about" class="about">About</a>
+        <a href="#services" class="services">Services</a>
+        <a href="#contact" class="contact">Contact</a>
     </div>
 
 </body>
